@@ -21,7 +21,7 @@
                             <img class="w-100 h-100" src="img/product-4.jpg" alt="Image">
                         </div>
                     </div>
-                    <a class="carousel-control-prev" href="#product-carousel" data-slide="prev">
+                    <a class="carousel-control-prev" href="{{products.image.url}}" data-slide="prev">
                         <i class="fa fa-2x fa-angle-left text-dark"></i>
                     </a>
                     <a class="carousel-control-next" href="#product-carousel" data-slide="next">
@@ -32,7 +32,7 @@
 
             <div class="col-lg-7 h-auto mb-30">
                 <div class="h-100 bg-light p-30">
-                    <h3>Product Name Goes Here</h3>
+                    <h3>{{products.name}}</h3>
                     <div class="d-flex mb-3">
                         <div class="text-primary mr-2">
                             <small class="fas fa-star"></small>
@@ -43,12 +43,10 @@
                         </div>
                         <small class="pt-1">(99 Reviews)</small>
                     </div>
-                    <h3 class="font-weight-semi-bold mb-4">$150.00</h3>
-                    <p class="mb-4">Volup erat ipsum diam elitr rebum et dolor. Est nonumy elitr erat diam stet sit
-                        clita ea. Sanc ipsum et, labore clita lorem magna duo dolor no sea
-                        Nonumy</p>
+                    <h3 class="font-weight-semi-bold mb-4">{{products.price}}</h3>
+                    <p class="mb-4">products.description</p>
                     <div class="d-flex mb-3">
-                        <strong class="text-dark mr-3">Sizes:</strong>
+                        <strong class="text-dark mr-3">{{products.size}}</strong>
                         <form>
                             <div class="custom-control custom-radio custom-control-inline">
                                 <input type="radio" class="custom-control-input" id="size-1" name="size">
@@ -73,7 +71,7 @@
                         </form>
                     </div>
                     <div class="d-flex mb-4">
-                        <strong class="text-dark mr-3">Colors:</strong>
+                        <strong class="text-dark mr-3">{{product.color}}</strong>
                         <form>
                             <div class="custom-control custom-radio custom-control-inline">
                                 <input type="radio" class="custom-control-input" id="color-1" name="color">
@@ -363,7 +361,7 @@
                             </div>
                         </div>
                         <div class="text-center py-4">
-                            <a class="h6 text-decoration-none text-truncate" href="">Product Name Goes Here</a>
+                            <a class="h6 text-decoration-none text-truncate" href=""></a>
                             <div class="d-flex align-items-center justify-content-center mt-2">
                                 <h5>$123.00</h5><h6 class="text-muted ml-2"><del>$123.00</del></h6>
                             </div>

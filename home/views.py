@@ -1,5 +1,5 @@
-from django.shortcuts import render
-
+from django.shortcuts import render, get_object_or_404
+from .models import Product
 # Create your views here.
 def index(request):
     return render(request, template_name="index.html")
@@ -10,11 +10,18 @@ def checkout(request):
 def contact(request):
     return render(request, template_name="contact.html")
 
-def detail(request):
-    return render(request, template_name="detail.html")
+def detail(request, product_id):
+    product = get_object_or_404(Product, pk=product_id)
+    context = {
+        "products" : product,
+    }
+    return render(request, 'detail.html', context)
 
 def shop(request):
-    return render(request, template_name="shop.html")
+    context = {
+        "products" : Product.objects.all(),
+    }
+    return render(request, "shop.html", context)
 
 def cart(request):
     return render(request, template_name="cart.html")
