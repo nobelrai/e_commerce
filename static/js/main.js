@@ -102,3 +102,37 @@
     
 })(jQuery);
 
+
+
+
+document.addEventListener('DOMContentLoaded', function () {
+    // Set the active state based on stored value
+    setActiveState();
+});
+
+function setActive(clickedElement, page) {
+    // Remove the 'active' class from all navigation items
+    var navItems = document.getElementsByClassName('nav-item');
+    for (var i = 0; i < navItems.length; i++) {
+        navItems[i].classList.remove('active');
+    }
+
+    // Add the 'active' class to the clicked navigation item
+    clickedElement.classList.add('active');
+
+    // Store the active page in local storage
+    localStorage.setItem('activePage', page);
+}
+
+function setActiveState() {
+    // Get the active page from local storage
+    var activePage = localStorage.getItem('activePage');
+
+    // If an active page is found, set the active state
+    if (activePage) {
+        var navItem = document.querySelector('.nav-item[data-page="' + activePage + '"]');
+        if (navItem) {
+            navItem.classList.add('active');
+        }
+    }
+}
