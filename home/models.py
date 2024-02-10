@@ -40,6 +40,7 @@ class Product(models.Model):
     size = models.CharField(max_length = 20, choices = SIZE_CHOICES)
     color = models.CharField(max_length = 20, choices = COLOR_CHOICES)
     date_added = models.DateTimeField(auto_now_add=True)
+    slug = models.SlugField(default="", null=False)
 
     def __str__(self):
         return f"{self.name}"

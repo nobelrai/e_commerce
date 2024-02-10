@@ -10,8 +10,8 @@ def checkout(request):
 def contact(request):
     return render(request, template_name="contact.html")
 
-def detail(request, product_id):
-    product = get_object_or_404(Product, pk=product_id)
+def detail(request, slug):
+    product = Product.objects.get(slug=slug)
     context = {
         "products" : product,
     }

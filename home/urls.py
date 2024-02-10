@@ -6,6 +6,6 @@ urlpatterns = [
     path("checkout/", checkout, name="checkout"),
     path("contact/", contact, name="contact"),
     path("shop/", shop, name="shop"),
-    path("detail/<int:product_id>/", detail, name="detail"),
+    path("detail/<slug:slug>/", detail, name="detail"),
 
 ]

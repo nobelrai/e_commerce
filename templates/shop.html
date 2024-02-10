@@ -172,11 +172,11 @@
                         </div>
                     </div>
                     <div class="text-center py-4">
-                        <a class="h6 text-decoration-none text-truncate" href="{% url 'detail' product_id=product.id %}">{{ product.name }}</a>
+                        <a class="h6 text-decoration-none text-truncate" href="{% url 'detail' slug=product.slug  %}">{{ product.name }}</a>
                         <div class="d-flex align-items-center justify-content-center mt-2">
                             <h5>Rs{{ product.price|floatformat:2 }}</h5><h6 class="text-muted ml-2"><del>Rs{{ product.price|floatformat:2 }}</del></h6>
                         </div>
-                        <a href="{% url 'detail' product_id=product.id %}">View Details</a>
+                        <a href="{% url 'detail' slug=product.slug %}">View Details</a>
                         <div class="d-flex align-items-center justify-content-center mb-1">
                             <small class="fa fa-star text-primary mr-1"></small>
                             <small class="fa fa-star text-primary mr-1"></small>

@@ -105,12 +105,13 @@
 
 
 
+
 document.addEventListener('DOMContentLoaded', function () {
     // Set the active state based on stored value
     setActiveState();
 });
 
-function setActive(clickedElement, page) {
+function setActive(page) {
     // Remove the 'active' class from all navigation items
     var navItems = document.getElementsByClassName('nav-item');
     for (var i = 0; i < navItems.length; i++) {
@@ -118,7 +119,7 @@ function setActive(clickedElement, page) {
     }
 
     // Add the 'active' class to the clicked navigation item
-    clickedElement.classList.add('active');
+    event.target.classList.add('active');
 
     // Store the active page in local storage
     localStorage.setItem('activePage', page);
